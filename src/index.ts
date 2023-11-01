@@ -1,7 +1,16 @@
-const message = 'Hello World!';
+import express from 'express';
+import { config } from 'dotenv';
+config();
 
-function printMessage(m: string) {
-  console.log(m);
-}
+const port = process.env.PORT;
+const app = express();
 
-printMessage(message);
+// app.use();
+
+app.get('/', (req, res) => {
+  res.send('Hello, TypeScript Server.');
+});
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});

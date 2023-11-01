@@ -1,8 +1,18 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const message = 'Hello World!';
-function printMessage(m) {
-    console.log(m);
-}
-printMessage(message);
+const express_1 = __importDefault(require("express"));
+const dotenv_1 = require("dotenv");
+(0, dotenv_1.config)();
+const port = process.env.PORT;
+const app = (0, express_1.default)();
+// app.use();
+app.get('/', (req, res) => {
+    res.send('Hello, TypeScript Server.');
+});
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+});
 //# sourceMappingURL=index.js.map
