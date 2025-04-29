@@ -9,14 +9,24 @@
   "main": "index.ts",
   "scripts": {
     "start": "node --watch --env-file=.env dist/index.js",
-    "watch": "tsc --watch",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "watch": "tsc --watch && eslint --ext",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Carlos",
   "license": "MIT",
   "devDependencies": {
+    "@eslint/js": "^9.25.1",
     "@types/node": "^22.1.0",
-    "typescript": "^5.4.2"
+    "eslint": "^9.25.1",
+    "eslint-config-prettier": "^10.1.2",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.4.2",
+    "typescript-eslint": "^8.31.1"
   }
 }

@@ -1,0 +1,7 @@
+{
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "htmlAttributeDoubleQuotes": true,
+  "semi": true,
+  "cssQuoteStyle": "double"
+}
